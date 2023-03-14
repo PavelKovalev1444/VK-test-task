@@ -1,0 +1,10 @@
+.header-content{
+    display: flex;
+    justify-content: space-around;
+    border: 14px solid rgb(189, 189, 189);
+    background-color: rgb(192,192,192);
+    width: 512px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    box-shadow: inset 5px 5px -5px -5px rgb(189, 189, 189);
+}
