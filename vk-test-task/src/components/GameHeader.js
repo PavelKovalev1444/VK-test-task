@@ -12,10 +12,13 @@ const GameHeader = (props) => {
     return (
         <div className='header-content'>
             <div className='header-mines'>
-                <MineCounter counter={props.counter}/>
+                <MineCounter mineCounter={props.mineCounter}/>
             </div>
             <div className='header-smile'>
-                <Smile />
+                <Smile 
+                    isLose={props.isLose}
+                    restartGame={props.restartGame}
+                />
             </div>
             <div className='header-timer'>
                 <Timer counter={props.time}/>
@@ -25,8 +28,10 @@ const GameHeader = (props) => {
 }
 
 GameHeader.propTypes = {
-    counter: PropTypes.number,
-    time: PropTypes.number
+    isLose: PropTypes.bool,
+    mineCounter: PropTypes.number,
+    time: PropTypes.number,
+    restartGame: PropTypes.func
 }
 
 export default GameHeader

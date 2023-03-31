@@ -3,25 +3,25 @@ import PropTypes from 'prop-types'
 
 const MineCounter = (props) => {
 
-    function makeNumber(counter){
+    function makeNumber(){
         return (
             <div>
                 <img src={require('./../../textures/timer_0.JPG')}/>
-                <img src={require(`./../../textures/timer_${(counter - counter%10)/10}.JPG`)}/>
-                <img src={require(`./../../textures/timer_${counter%10}.JPG`)}/>
+                <img src={require(`./../../textures/timer_${(props.mineCounter - props.mineCounter%10)/10}.JPG`)}/>
+                <img src={require(`./../../textures/timer_${props.mineCounter%10}.JPG`)}/>
             </div>
         )
     }
 
     return (
         <div className='header-mine-counter'>
-            {makeNumber(props.counter)}
+            {makeNumber()}
         </div>
     )
 }
 
 MineCounter.propTypes = {
-    counter: PropTypes.number
+    mineCounter: PropTypes.number
 }
 
 export default MineCounter
